@@ -15,6 +15,9 @@ class Link < ActiveRecord::Base
     Visit.visit_link(self, user)
   end
 
+  # VO - Cleaner to do this with an AR query instead of the .each
+  # visit_count = self.visits.select(:user_id).uniq.length (.count doesn't work here). 
+  
   def uniq_visits
     visits_arr = self.visits
     visit_count = 0
