@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+
+
 ActiveRecord::Schema.define(:version => 20130124201201) do
+
+# VO - I know you get them for free, but you don't need created_at/updated_at fields in most of these tables.  
+#      They kind of just clutter up the schema.  
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
