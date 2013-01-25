@@ -1,3 +1,5 @@
+# VO - Maybe add a few options to a run menu.  "Whatchya wanna do?" is a little ambiguous.  :) 
+
 def display_comments(link)
   comments_arr = link.comments
   comments_arr.each do |comment|
