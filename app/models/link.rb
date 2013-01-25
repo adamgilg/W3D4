@@ -10,13 +10,9 @@ class Link < ActiveRecord::Base
     link.save
     link
   end
-
+  #move this to user?
   def visit(user)
     Visit.visit_link(self, user)
-  end
-
-  def display_visits
-    puts self.visits.count#.user_id #<< doesn't work. << how do?
   end
 
   def uniq_visits
@@ -39,5 +35,6 @@ class Link < ActiveRecord::Base
     end
     nil
   end
+
 
 end
